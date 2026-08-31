@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ButtonComponent } from '../../shared/components/button/button';
 import { InputComponent } from '../../shared/components/input/input';
 import { TextareaComponent } from '../../shared/components/textarea/textarea';
+import { CardComponent } from '../../shared/components/card/card';
 
 @Component({
   selector: 'app-design-system',
@@ -9,7 +10,8 @@ import { TextareaComponent } from '../../shared/components/textarea/textarea';
   imports: [ 
     ButtonComponent,
     InputComponent,
-    TextareaComponent
+    TextareaComponent,
+    CardComponent
  ],
   templateUrl: './design-system.html',
   styleUrl: './design-system.css',

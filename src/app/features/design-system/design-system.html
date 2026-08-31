@@ -1,14 +1,25 @@
 <div class="design-system">
 
-  <header class="ds-header">
-    <p class="ds-eyebrow">REIS WEDDING</p>
+  <!-- ========================================
+       HEADER
+       Identificação do Design System
+       ======================================== -->
 
-    <h1>Design System</h1>
+  <header class="ds-header">
+
+    <p class="ds-eyebrow">
+      REIS WEDDING
+    </p>
+
+    <h1>
+      Design System
+    </h1>
 
     <p class="ds-description">
       Componentes, estilos e padrões visuais que formam
       a identidade do Reis Wedding.
     </p>
+
   </header>
 
 
@@ -19,14 +30,20 @@
   <section class="ds-section">
 
     <div class="ds-section-header">
-      <p class="ds-eyebrow">COMPONENTS</p>
 
-      <h2>Buttons</h2>
+      <p class="ds-eyebrow">
+        COMPONENTS
+      </p>
+
+      <h2>
+        Buttons
+      </h2>
 
       <p>
         Botões utilizados para ações e interações
         dentro do portal.
       </p>
+
     </div>
 
 
@@ -34,7 +51,9 @@
 
     <div class="ds-group">
 
-      <h3>Variantes</h3>
+      <h3>
+        Variantes
+      </h3>
 
       <div class="ds-row">
 
@@ -63,7 +82,9 @@
 
     <div class="ds-group">
 
-      <h3>Tamanhos</h3>
+      <h3>
+        Tamanhos
+      </h3>
 
       <div class="ds-row">
 
@@ -88,7 +109,9 @@
 
     <div class="ds-group">
 
-      <h3>Estados</h3>
+      <h3>
+        Estados
+      </h3>
 
       <div class="ds-row">
 
@@ -106,131 +129,437 @@
 
   </section>
 
+
   <!-- ========================================
-     INPUTS
-     ======================================== -->
+       INPUTS
+       ======================================== -->
 
-<section class="ds-section">
+  <section class="ds-section">
 
-  <div class="ds-section-header">
+    <div class="ds-section-header">
 
-    <p class="ds-eyebrow">COMPONENTS</p>
+      <p class="ds-eyebrow">
+        COMPONENTS
+      </p>
 
-    <h2>Inputs</h2>
+      <h2>
+        Inputs
+      </h2>
 
-    <p>
-      Campos utilizados para entrada de informações
-      dentro do portal.
-    </p>
-
-  </div>
-
-
-  <div class="ds-group">
-
-    <h3>Campos básicos</h3>
-
-    <div class="ds-input-grid">
-
-      <app-input
-        label="Nome dos noivos"
-        placeholder="João & Maria"
-      />
-
-      <app-input
-        label="E-mail"
-        type="email"
-        placeholder="exemplo@email.com"
-      />
+      <p>
+        Campos utilizados para entrada de informações
+        dentro do portal.
+      </p>
 
     </div>
 
-  </div>
 
+    <!-- Campos básicos -->
 
-  <div class="ds-group">
+    <div class="ds-group">
 
-    <h3>Tamanhos</h3>
+      <h3>
+        Campos básicos
+      </h3>
 
-    <div class="ds-input-grid">
+      <div class="ds-input-grid">
 
-      <app-input
-        label="Small"
-        size="sm"
-        placeholder="Campo pequeno"
-      />
+        <app-input
+          id="guest-name"
+          label="Nome dos noivos"
+          placeholder="João & Maria"
+        />
 
-      <app-input
-        label="Medium"
-        size="md"
-        placeholder="Campo médio"
-      />
+        <app-input
+          id="guest-email"
+          label="E-mail"
+          type="email"
+          placeholder="exemplo@email.com"
+        />
 
-      <app-input
-        label="Large"
-        size="lg"
-        placeholder="Campo grande"
-      />
-
-    </div>
-
-  </div>
-
-
-  <div class="ds-group">
-
-    <h3>Estados</h3>
-
-    <div class="ds-input-grid">
-
-      <app-input
-        label="Campo obrigatório"
-        placeholder="Digite seu nome"
-        [required]="true"
-      />
-
-      <app-input
-        label="Campo com erro"
-        placeholder="Digite seu e-mail"
-        error="Informe um e-mail válido"
-      />
-
-      <app-input
-        label="Campo desabilitado"
-        placeholder="Indisponível"
-        [disabled]="true"
-      />
+      </div>
 
     </div>
 
-  </div>
 
-</section>
+    <!-- Tamanhos -->
 
- <!-- ========================================
-     IDENTIFICAÇÃO
-     Demonstração de IDs automático e personalizado
-     ======================================== -->
+    <div class="ds-group">
 
-<div class="ds-group">
+      <h3>
+        Tamanhos
+      </h3>
 
-  <h3>Identificação</h3>
+      <div class="ds-input-grid">
 
-  <div class="ds-input-grid">
+        <app-input
+          id="input-small"
+          label="Small"
+          size="sm"
+          placeholder="Campo pequeno"
+        />
 
-    <app-textarea
-      label="ID automático"
-      placeholder="Este campo recebe um ID automaticamente."
-      helperText="Nenhum ID foi informado no componente."
-    />
+        <app-input
+          id="input-medium"
+          label="Medium"
+          size="md"
+          placeholder="Campo médio"
+        />
 
-    <app-textarea
-      id="custom-message"
-      label="ID personalizado"
-      placeholder="Este campo possui um ID definido."
-      helperText="ID: custom-message"
-    />
+        <app-input
+          id="input-large"
+          label="Large"
+          size="lg"
+          placeholder="Campo grande"
+        />
 
-  </div>
+      </div>
+
+    </div>
+
+
+    <!-- Estados -->
+
+    <div class="ds-group">
+
+      <h3>
+        Estados
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-input
+          id="input-required"
+          label="Campo obrigatório"
+          placeholder="Digite seu nome"
+          [required]="true"
+        />
+
+        <app-input
+          id="input-error"
+          label="Campo com erro"
+          placeholder="Digite seu e-mail"
+          error="Informe um e-mail válido"
+        />
+
+        <app-input
+          id="input-disabled"
+          label="Campo desabilitado"
+          placeholder="Indisponível"
+          [disabled]="true"
+        />
+
+      </div>
+
+    </div>
+
+
+    <!-- Helper text -->
+
+    <div class="ds-group">
+
+      <h3>
+        Helper text
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-input
+          id="input-helper-name"
+          label="Nome completo"
+          placeholder="Digite seu nome"
+          helperText="Informe seu nome completo."
+        />
+
+        <app-input
+          id="input-helper-email"
+          label="E-mail"
+          type="email"
+          placeholder="exemplo@email.com"
+          helperText="Usaremos este e-mail para comunicação do casamento."
+        />
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================
+       TEXTAREAS
+       ======================================== -->
+
+  <section class="ds-section">
+
+    <div class="ds-section-header">
+
+      <p class="ds-eyebrow">
+        COMPONENTS
+      </p>
+
+      <h2>
+        Textareas
+      </h2>
+
+      <p>
+        Campos destinados à entrada de textos longos
+        dentro do portal.
+      </p>
+
+    </div>
+
+
+    <!-- Campos básicos -->
+
+    <div class="ds-group">
+
+      <h3>
+        Campos básicos
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-textarea
+          id="message-basic"
+          label="Mensagem para os noivos"
+          placeholder="Escreva uma mensagem especial..."
+          helperText="Compartilhe uma mensagem para o casal."
+        />
+
+        <app-textarea
+          id="story-basic"
+          label="Nossa história"
+          placeholder="Conte um pouco sobre essa história..."
+          [rows]="6"
+        />
+
+      </div>
+
+    </div>
+
+
+    <!-- Identificação -->
+
+    <div class="ds-group">
+
+      <h3>
+        Identificação
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-textarea
+          label="ID automático"
+          placeholder="Este campo recebe um ID automaticamente."
+          helperText="Nenhum ID foi informado no componente."
+        />
+
+        <app-textarea
+          id="custom-message"
+          label="ID personalizado"
+          placeholder="Este campo possui um ID definido."
+          helperText="ID: custom-message"
+        />
+
+      </div>
+
+    </div>
+
+
+    <!-- Tamanhos -->
+
+    <div class="ds-group">
+
+      <h3>
+        Tamanhos
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-textarea
+          id="textarea-small"
+          label="Small"
+          size="sm"
+          placeholder="Campo pequeno"
+        />
+
+        <app-textarea
+          id="textarea-medium"
+          label="Medium"
+          size="md"
+          placeholder="Campo médio"
+        />
+
+        <app-textarea
+          id="textarea-large"
+          label="Large"
+          size="lg"
+          placeholder="Campo grande"
+        />
+
+      </div>
+
+    </div>
+
+
+    <!-- Redimensionamento -->
+
+    <div class="ds-group">
+
+      <h3>
+        Redimensionamento
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-textarea
+          id="textarea-none"
+          label="None"
+          placeholder="Não redimensionável"
+          resize="none"
+        />
+
+        <app-textarea
+          id="textarea-vertical"
+          label="Vertical"
+          placeholder="Redimensionamento vertical"
+          resize="vertical"
+        />
+
+        <app-textarea
+          id="textarea-both"
+          label="Both"
+          placeholder="Redimensionamento livre"
+          resize="both"
+        />
+
+      </div>
+
+    </div>
+
+
+    <!-- Estados -->
+
+    <div class="ds-group">
+
+      <h3>
+        Estados
+      </h3>
+
+      <div class="ds-input-grid">
+
+        <app-textarea
+          id="textarea-required"
+          label="Campo obrigatório"
+          placeholder="Digite uma mensagem"
+          [required]="true"
+        />
+
+        <app-textarea
+          id="textarea-error"
+          label="Campo com erro"
+          placeholder="Digite uma mensagem"
+          error="Informe uma mensagem antes de continuar."
+        />
+
+        <app-textarea
+          id="textarea-disabled"
+          label="Campo desabilitado"
+          placeholder="Indisponível"
+          [disabled]="true"
+        />
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ========================================
+       CARDS
+       ======================================== -->
+
+  <section class="ds-section">
+
+    <div class="ds-section-header">
+
+      <p class="ds-eyebrow">
+        COMPONENTS
+      </p>
+
+      <h2>
+        Cards
+      </h2>
+
+      <p>
+        Containers utilizados para organizar e destacar
+        conteúdos dentro do portal.
+      </p>
+
+    </div>
+
+
+    <!-- Card básico -->
+
+    <div class="ds-group">
+
+      <h3>
+        Card básico
+      </h3>
+
+      <app-card>
+
+        <h3>
+          Nosso casamento
+        </h3>
+
+        <p>
+          Um momento especial para celebrar nossa história
+          ao lado de quem amamos.
+        </p>
+
+      </app-card>
+
+    </div>
+
+
+    <!-- Card com componentes -->
+
+    <div class="ds-group">
+
+      <h3>
+        Card com componentes
+      </h3>
+
+      <app-card>
+
+        <h3>
+          Confirme sua presença
+        </h3>
+
+        <p>
+          Preencha seus dados para confirmar sua presença
+          no casamento.
+        </p>
+
+        <div class="ds-row">
+
+          <app-button variant="primary">
+            Confirmar presença
+          </app-button>
+
+          <app-button variant="outline">
+            Ver convite
+          </app-button>
+
+        </div>
+
+      </app-card>
+
+    </div>
+
+  </section>
 
 </div>
