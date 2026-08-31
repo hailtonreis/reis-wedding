@@ -1,0 +1,182 @@
+/* ========================================
+   REIS WEDDING — INPUT
+   Componente de entrada de dados
+   ======================================== */
+
+
+/* ========================================
+   INPUT — CONTAINER
+   Estrutura principal do campo
+   ======================================== */
+
+.rw-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  width: 100%;
+}
+
+
+/* ========================================
+   INPUT — LABEL
+   Identificação do campo
+   ======================================== */
+
+.rw-input__label {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
+
+  color: var(--color-text);
+}
+
+.rw-input__required {
+  margin-left: var(--space-1);
+
+  color: var(--color-primary);
+}
+
+
+/* ========================================
+   INPUT — FIELD
+   Estrutura visual principal
+   ======================================== */
+
+.rw-input__field {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-surface);
+  color: var(--color-text);
+
+  font-family: var(--font-body);
+
+  outline: none;
+
+  transition:
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
+}
+
+
+/* ========================================
+   INPUT — TAMANHOS
+   Escala compartilhada do Design System
+   ======================================== */
+
+.rw-input__field--sm {
+  min-height: 2rem;
+
+  padding: 0 var(--space-3);
+
+  font-size: var(--text-sm);
+}
+
+.rw-input__field--md {
+  min-height: 2.75rem;
+
+  padding: 0 var(--space-4);
+
+  font-size: var(--text-base);
+}
+
+.rw-input__field--lg {
+  min-height: 3.25rem;
+
+  padding: 0 var(--space-4);
+
+  font-size: var(--text-lg);
+}
+
+
+/* ========================================
+   INPUT — PLACEHOLDER
+   Texto auxiliar exibido no campo vazio
+   ======================================== */
+
+.rw-input__field::placeholder {
+  color: var(--color-text-muted);
+
+  opacity: var(--opacity-muted);
+}
+
+
+/* ========================================
+   INPUT — FOCO
+   Estado de interação do campo
+   ======================================== */
+
+.rw-input__field:focus {
+  border-color: var(--color-primary);
+
+  box-shadow:
+    0 0 0 3px
+    color-mix(
+      in srgb,
+      var(--color-primary) 15%,
+      transparent
+    );
+}
+
+
+/* ========================================
+   INPUT — ERRO
+   Estado inválido do campo
+   ======================================== */
+
+.rw-input__field--error {
+  border-color: var(--color-primary-dark);
+}
+
+.rw-input__error {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+
+  color: var(--color-primary-dark);
+}
+
+
+/* ========================================
+   INPUT — HELPER
+   Orientação complementar do campo
+   ======================================== */
+
+.rw-input__helper {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+
+  color: var(--color-text-muted);
+}
+
+
+/* ========================================
+   INPUT — DESABILITADO
+   Campo indisponível para interação
+   ======================================== */
+
+.rw-input__field:disabled {
+  background-color: var(--color-background);
+
+  opacity: var(--opacity-disabled);
+
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   INPUT — ACESSIBILIDADE
+   Ajustes para teclado e foco
+   ======================================== */
+
+.rw-input__field:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}

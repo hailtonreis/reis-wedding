@@ -1,0 +1,143 @@
+.rw-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-medium);
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+/* ========================================
+   TAMANHOS
+   ======================================== */
+
+.rw-button--sm {
+  min-height: 2rem;
+  padding: 0 var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.rw-button--md {
+  min-height: 2.75rem;
+  padding: 0 var(--space-4);
+  font-size: var(--text-base);
+}
+
+.rw-button--lg {
+  min-height: 3.25rem;
+  padding: 0 var(--space-6);
+  font-size: var(--text-lg);
+}
+
+
+/* ========================================
+   PRIMARY
+   ======================================== */
+
+.rw-button--primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.rw-button--primary:hover:not(:disabled) {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+
+/* ========================================
+   SECONDARY
+   ======================================== */
+
+.rw-button--secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.rw-button--secondary:hover:not(:disabled) {
+  background-color: var(--color-secondary-light);
+}
+
+
+/* ========================================
+   OUTLINE
+   ======================================== */
+
+.rw-button--outline {
+  background-color: transparent;
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.rw-button--outline:hover:not(:disabled) {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+
+/* ========================================
+   GHOST
+   ======================================== */
+
+.rw-button--ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.rw-button--ghost:hover:not(:disabled) {
+  background-color: var(--color-secondary-light);
+}
+
+
+/* ========================================
+   FOCO
+   ======================================== */
+
+.rw-button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   DESABILITADO
+   ======================================== */
+
+.rw-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* ========================================
+   BUTTON — BASE
+   Propriedades fundamentais do botão
+   ======================================== */
+
+.rw-button {
+  appearance: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* ========================================
+   BUTTON — LARGURA TOTAL
+   ======================================== */
+
+.rw-button--full-width {
+  width: 100%;
+}

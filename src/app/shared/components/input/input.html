@@ -1,0 +1,59 @@
+<div class="rw-input">
+
+  @if (label) {
+    <label
+      class="rw-input__label"
+      [for]="id"
+    >
+      {{ label }}
+
+      @if (required) {
+        <span
+          class="rw-input__required"
+          aria-hidden="true"
+        >
+          *
+        </span>
+      }
+    </label>
+  }
+
+  <input
+    class="rw-input__field"
+    [id]="id"
+    [class.rw-input__field--sm]="size === 'sm'"
+    [class.rw-input__field--md]="size === 'md'"
+    [class.rw-input__field--lg]="size === 'lg'"
+    [class.rw-input__field--error]="!!error"
+    [type]="type"
+    [value]="value"
+    [placeholder]="placeholder"
+    [disabled]="disabled"
+    [required]="required"
+    [attr.aria-invalid]="error ? 'true' : null"
+    [attr.aria-describedby]="
+      error
+        ? id + '-error'
+        : helperText
+          ? id + '-helper'
+          : null
+    "
+  >
+
+  @if (error) {
+    <span
+      class="rw-input__error"
+      [id]="id + '-error'"
+    >
+      {{ error }}
+    </span>
+  } @else if (helperText) {
+    <span
+      class="rw-input__helper"
+      [id]="id + '-helper'"
+    >
+      {{ helperText }}
+    </span>
+  }
+
+</div>

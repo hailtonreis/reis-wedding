@@ -1,0 +1,210 @@
+<div class="design-system">
+
+  <header class="ds-header">
+    <p class="ds-eyebrow">REIS WEDDING</p>
+
+    <h1>Design System</h1>
+
+    <p class="ds-description">
+      Componentes, estilos e padrões visuais que formam
+      a identidade do Reis Wedding.
+    </p>
+  </header>
+
+
+  <!-- ========================================
+       BUTTONS
+       ======================================== -->
+
+  <section class="ds-section">
+
+    <div class="ds-section-header">
+      <p class="ds-eyebrow">COMPONENTS</p>
+
+      <h2>Buttons</h2>
+
+      <p>
+        Botões utilizados para ações e interações
+        dentro do portal.
+      </p>
+    </div>
+
+
+    <!-- Variantes -->
+
+    <div class="ds-group">
+
+      <h3>Variantes</h3>
+
+      <div class="ds-row">
+
+        <app-button variant="primary">
+          Primary
+        </app-button>
+
+        <app-button variant="secondary">
+          Secondary
+        </app-button>
+
+        <app-button variant="outline">
+          Outline
+        </app-button>
+
+        <app-button variant="ghost">
+          Ghost
+        </app-button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Tamanhos -->
+
+    <div class="ds-group">
+
+      <h3>Tamanhos</h3>
+
+      <div class="ds-row">
+
+        <app-button size="sm">
+          Small
+        </app-button>
+
+        <app-button size="md">
+          Medium
+        </app-button>
+
+        <app-button size="lg">
+          Large
+        </app-button>
+
+      </div>
+
+    </div>
+
+
+    <!-- Estados -->
+
+    <div class="ds-group">
+
+      <h3>Estados</h3>
+
+      <div class="ds-row">
+
+        <app-button>
+          Normal
+        </app-button>
+
+        <app-button [disabled]="true">
+          Disabled
+        </app-button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================
+     INPUTS
+     ======================================== -->
+
+<section class="ds-section">
+
+  <div class="ds-section-header">
+
+    <p class="ds-eyebrow">COMPONENTS</p>
+
+    <h2>Inputs</h2>
+
+    <p>
+      Campos utilizados para entrada de informações
+      dentro do portal.
+    </p>
+
+  </div>
+
+
+  <div class="ds-group">
+
+    <h3>Campos básicos</h3>
+
+    <div class="ds-input-grid">
+
+      <app-input
+        label="Nome dos noivos"
+        placeholder="João & Maria"
+      />
+
+      <app-input
+        label="E-mail"
+        type="email"
+        placeholder="exemplo@email.com"
+      />
+
+    </div>
+
+  </div>
+
+
+  <div class="ds-group">
+
+    <h3>Tamanhos</h3>
+
+    <div class="ds-input-grid">
+
+      <app-input
+        label="Small"
+        size="sm"
+        placeholder="Campo pequeno"
+      />
+
+      <app-input
+        label="Medium"
+        size="md"
+        placeholder="Campo médio"
+      />
+
+      <app-input
+        label="Large"
+        size="lg"
+        placeholder="Campo grande"
+      />
+
+    </div>
+
+  </div>
+
+
+  <div class="ds-group">
+
+    <h3>Estados</h3>
+
+    <div class="ds-input-grid">
+
+      <app-input
+        label="Campo obrigatório"
+        placeholder="Digite seu nome"
+        [required]="true"
+      />
+
+      <app-input
+        label="Campo com erro"
+        placeholder="Digite seu e-mail"
+        error="Informe um e-mail válido"
+      />
+
+      <app-input
+        label="Campo desabilitado"
+        placeholder="Indisponível"
+        [disabled]="true"
+      />
+
+    </div>
+
+  </div>
+
+</section>
+
+</div>

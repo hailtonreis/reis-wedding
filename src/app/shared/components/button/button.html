@@ -1,0 +1,15 @@
+<button
+  [type]="type"
+  [disabled]="disabled"
+  class="rw-button"
+  [class.rw-button--primary]="variant === 'primary'"
+  [class.rw-button--secondary]="variant === 'secondary'"
+  [class.rw-button--outline]="variant === 'outline'"
+  [class.rw-button--ghost]="variant === 'ghost'"
+  [class.rw-button--sm]="size === 'sm'"
+  [class.rw-button--md]="size === 'md'"
+  [class.rw-button--lg]="size === 'lg'"
+  [class.rw-button--full-width]="fullWidth"
+>
+  <ng-content></ng-content>
+</button>
