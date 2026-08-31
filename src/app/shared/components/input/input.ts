@@ -10,7 +10,9 @@ type InputSize = 'sm' | 'md' | 'lg';
 })
 export class InputComponent {
 
-  @Input() id = '';
+  private static nextId = 0;
+
+  @Input() id = `rw-input-${InputComponent.nextId++}`;
 
   @Input() label = '';
 
