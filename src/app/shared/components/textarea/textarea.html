@@ -1,0 +1,91 @@
+<div class="rw-textarea">
+
+  <!-- ========================================
+       TEXTAREA — LABEL
+       Identificação do campo
+       ======================================== -->
+
+  @if (label) {
+    <label
+      class="rw-textarea__label"
+      [for]="id"
+    >
+      {{ label }}
+
+      @if (required) {
+        <span
+          class="rw-textarea__required"
+          aria-hidden="true"
+        >
+          *
+        </span>
+      }
+    </label>
+  }
+
+
+  <!-- ========================================
+       TEXTAREA — FIELD
+       Campo principal de texto
+       ======================================== -->
+
+  <textarea
+    class="rw-textarea__field"
+    [id]="id"
+
+    [class.rw-textarea__field--sm]="size === 'sm'"
+    [class.rw-textarea__field--md]="size === 'md'"
+    [class.rw-textarea__field--lg]="size === 'lg'"
+    [class.rw-textarea__field--error]="!!error"
+
+    [rows]="rows"
+    [placeholder]="placeholder"
+
+    [disabled]="disabled"
+    [required]="required"
+
+    [attr.aria-invalid]="error ? 'true' : null"
+
+    [attr.aria-describedby]="
+      error
+        ? id + '-error'
+        : helperText
+          ? id + '-helper'
+          : null
+    "
+
+    [style.resize]="resize"
+  >{{ value }}</textarea>
+
+
+  <!-- ========================================
+       TEXTAREA — ERROR
+       Mensagem apresentada quando o campo é inválido
+       ======================================== -->
+
+  @if (error) {
+    <span
+      class="rw-textarea__error"
+      [id]="id + '-error'"
+      role="alert"
+    >
+      {{ error }}
+    </span>
+  }
+
+
+  <!-- ========================================
+       TEXTAREA — HELPER
+       Orientação complementar do campo
+       ======================================== -->
+
+  @else if (helperText) {
+    <span
+      class="rw-textarea__helper"
+      [id]="id + '-helper'"
+    >
+      {{ helperText }}
+    </span>
+  }
+
+</div>
