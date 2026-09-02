@@ -1,4 +1,5 @@
 :root {
+
   /* ========================================
      REIS WEDDING — DESIGN TOKENS
      ======================================== */
@@ -14,24 +15,41 @@
   --color-primary-dark: #704852;
   --color-primary-light: #b9828d;
 
+
   /* ---------- Secondary ---------- */
 
   --color-secondary: #d8b7a5;
   --color-secondary-light: #ead8cf;
 
+
   /* ---------- Accent ---------- */
 
   --color-accent: #c9a96e;
+
+
+  /* ---------- Semantic ---------- */
+
+  --color-success: #6f8f78;
+  --color-success-light: #e4ede6;
+
+  --color-warning: #a17c4a;
+  --color-warning-light: #f3eadb;
+
+  --color-danger: #9a5f63;
+  --color-danger-light: #f1e1e2;
+
 
   /* ---------- Background / Surface ---------- */
 
   --color-background: #fbf8f6;
   --color-surface: #ffffff;
 
+
   /* ---------- Text ---------- */
 
   --color-text: #3f3638;
   --color-text-muted: #766a6d;
+
 
   /* ---------- Border ---------- */
 
@@ -46,6 +64,7 @@
 
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Montserrat", Arial, sans-serif;
+
 
   /* ---------- Pesos ---------- */
 
@@ -120,4 +139,5 @@
 
   --opacity-disabled: 0.5;
   --opacity-muted: 0.7;
+
 }
