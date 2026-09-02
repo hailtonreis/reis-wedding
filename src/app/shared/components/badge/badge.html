@@ -1,0 +1,12 @@
+<span
+  class="rw-badge"
+  [class.rw-badge--default]="variant === 'default'"
+  [class.rw-badge--primary]="variant === 'primary'"
+  [class.rw-badge--success]="variant === 'success'"
+  [class.rw-badge--warning]="variant === 'warning'"
+  [class.rw-badge--danger]="variant === 'danger'"
+  [class.rw-badge--sm]="size === 'sm'"
+  [class.rw-badge--md]="size === 'md'"
+>
+  <ng-content></ng-content>
+</span>
