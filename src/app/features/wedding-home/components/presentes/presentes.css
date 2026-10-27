@@ -1,0 +1,340 @@
+.presentes {
+  position: relative;
+  padding: 8rem 2rem;
+  background: #f8f4f0;
+  overflow: hidden;
+}
+
+.presentes__container {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================================================
+   CABEÇALHO
+   ========================================================= */
+
+.presentes__header {
+  max-width: 720px;
+  margin: 0 auto 5rem;
+  text-align: center;
+}
+
+.presentes__eyebrow {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #a67c68;
+}
+
+.presentes__title {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.6rem, 5vw, 4.6rem);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  color: #332c28;
+}
+
+.presentes__title span {
+  display: block;
+  color: #a67c68;
+  font-style: italic;
+}
+
+.presentes__description {
+  max-width: 620px;
+  margin: 1.75rem auto 0;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #756a64;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.presentes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.presente-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #fffaf6;
+  border: 1px solid rgba(166, 124, 104, 0.16);
+  overflow: hidden;
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.presente-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(72, 53, 44, 0.1);
+}
+
+/* =========================================================
+   IMAGEM
+   ========================================================= */
+
+.presente-card__image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e9ddd5;
+}
+
+.presente-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(166, 124, 104, 0.12)
+    ),
+    #e9ddd5;
+}
+
+.presente-card__placeholder span {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #8b7063;
+}
+
+/* Quando colocarmos fotos reais nos presentes */
+
+.presente-card__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 600ms ease;
+}
+
+.presente-card:hover .presente-card__image img {
+  transform: scale(1.035);
+}
+
+/* =========================================================
+   CONTEÚDO
+   ========================================================= */
+
+.presente-card__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.presente-card__category {
+  margin: 0 0 0.85rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #a67c68;
+}
+
+.presente-card__title {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #332c28;
+}
+
+.presente-card__description {
+  margin: 1rem 0 0;
+  font-size: 0.94rem;
+  line-height: 1.75;
+  color: #756a64;
+}
+
+/* =========================================================
+   PREÇO + BOTÃO
+   ========================================================= */
+
+.presente-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.presente-card__price {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  white-space: nowrap;
+  color: #332c28;
+}
+
+.presente-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+
+  min-height: 44px;
+  padding: 0.75rem 1.1rem;
+
+  border: 1px solid #a67c68;
+  border-radius: 999px;
+
+  background: transparent;
+  color: #8f6958;
+
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+
+  cursor: pointer;
+
+  transition:
+    background-color 220ms ease,
+    color 220ms ease,
+    transform 220ms ease;
+}
+
+.presente-card__button:hover {
+  background: #a67c68;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.presente-card__button span:last-child {
+  transition: transform 220ms ease;
+}
+
+.presente-card__button:hover span:last-child {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   FECHAMENTO
+   ========================================================= */
+
+.presentes__closing {
+  position: relative;
+  max-width: 620px;
+  margin: 5rem auto 0;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.presentes__closing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 52px;
+  height: 1px;
+  background: #a67c68;
+  transform: translateX(-50%);
+}
+
+.presentes__closing p {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: #665952;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 960px) {
+
+  .presentes {
+    padding: 6rem 1.5rem;
+  }
+
+  .presentes__header {
+    margin-bottom: 4rem;
+  }
+
+  .presentes__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+  .presentes {
+    padding: 5rem 1.25rem;
+  }
+
+  .presentes__header {
+    margin-bottom: 3rem;
+  }
+
+  .presentes__title {
+    font-size: clamp(2.5rem, 13vw, 3.5rem);
+  }
+
+  .presentes__description {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  .presentes__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .presente-card__content {
+    padding: 1.6rem;
+  }
+
+  .presente-card__title {
+    font-size: 1.5rem;
+  }
+
+  .presentes__closing {
+    margin-top: 3.5rem;
+  }
+
+}
+
+/* =========================================================
+   ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .presente-card,
+  .presente-card__image img,
+  .presente-card__button,
+  .presente-card__button span {
+    transition: none;
+  }
+
+}
