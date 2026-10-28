@@ -1,6 +1,9 @@
 package br.com.reis_wedding.dto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import br.com.reis_wedding.enums.StatusConvite;
 
@@ -16,7 +19,15 @@ public class ConviteResponseDTO {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private String token;
-    
+
+    // Dados adicionais para o RSVP
+    private List<String> acompanhantes = new ArrayList<>();
+    private LocalDate dataLimiteRsvp;
+    private Boolean prazoRsvpEncerrado;
+
+    // =========================================================
+    // ID
+    // =========================================================
 
     public Long getId() {
         return id;
@@ -26,6 +37,10 @@ public class ConviteResponseDTO {
         this.id = id;
     }
 
+    // =========================================================
+    // CASAMENTO
+    // =========================================================
+
     public Long getCasamentoId() {
         return casamentoId;
     }
@@ -33,6 +48,10 @@ public class ConviteResponseDTO {
     public void setCasamentoId(Long casamentoId) {
         this.casamentoId = casamentoId;
     }
+
+    // =========================================================
+    // CONVIDADO
+    // =========================================================
 
     public String getNomeConvidado() {
         return nomeConvidado;
@@ -50,6 +69,10 @@ public class ConviteResponseDTO {
         this.telefone = telefone;
     }
 
+    // =========================================================
+    // STATUS
+    // =========================================================
+
     public StatusConvite getStatus() {
         return status;
     }
@@ -57,6 +80,10 @@ public class ConviteResponseDTO {
     public void setStatus(StatusConvite status) {
         this.status = status;
     }
+
+    // =========================================================
+    // LIMITE DE ACOMPANHANTES
+    // =========================================================
 
     public Integer getLimiteAcompanhantes() {
         return limiteAcompanhantes;
@@ -66,6 +93,10 @@ public class ConviteResponseDTO {
         this.limiteAcompanhantes = limiteAcompanhantes;
     }
 
+    // =========================================================
+    // DATA DE CONFIRMAÇÃO
+    // =========================================================
+
     public LocalDateTime getDataConfirmacao() {
         return dataConfirmacao;
     }
@@ -73,6 +104,10 @@ public class ConviteResponseDTO {
     public void setDataConfirmacao(LocalDateTime dataConfirmacao) {
         this.dataConfirmacao = dataConfirmacao;
     }
+
+    // =========================================================
+    // DATA DE CRIAÇÃO
+    // =========================================================
 
     public LocalDateTime getCreatedAt() {
         return createdAt;
@@ -82,6 +117,10 @@ public class ConviteResponseDTO {
         this.createdAt = createdAt;
     }
 
+    // =========================================================
+    // DATA DE ATUALIZAÇÃO
+    // =========================================================
+
     public LocalDateTime getUpdatedAt() {
         return updatedAt;
     }
@@ -89,7 +128,11 @@ public class ConviteResponseDTO {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
-    
+
+    // =========================================================
+    // TOKEN
+    // =========================================================
+
     public String getToken() {
         return token;
     }
@@ -97,4 +140,44 @@ public class ConviteResponseDTO {
     public void setToken(String token) {
         this.token = token;
     }
+
+    // =========================================================
+    // ACOMPANHANTES
+    // =========================================================
+
+    public List<String> getAcompanhantes() {
+        return acompanhantes;
+    }
+
+    public void setAcompanhantes(List<String> acompanhantes) {
+        this.acompanhantes = acompanhantes != null
+                ? acompanhantes
+                : new ArrayList<>();
+    }
+
+    // =========================================================
+    // DATA-LIMITE DO RSVP
+    // =========================================================
+
+    public LocalDate getDataLimiteRsvp() {
+        return dataLimiteRsvp;
+    }
+
+    public void setDataLimiteRsvp(LocalDate dataLimiteRsvp) {
+        this.dataLimiteRsvp = dataLimiteRsvp;
+    }
+
+    // =========================================================
+    // PRAZO DO RSVP ENCERRADO
+    // =========================================================
+
+    public Boolean getPrazoRsvpEncerrado() {
+        return prazoRsvpEncerrado;
+    }
+
+    public void setPrazoRsvpEncerrado(Boolean prazoRsvpEncerrado) {
+        this.prazoRsvpEncerrado = prazoRsvpEncerrado;
+    }
+
+    // FIM DO ARQUIVO
 }

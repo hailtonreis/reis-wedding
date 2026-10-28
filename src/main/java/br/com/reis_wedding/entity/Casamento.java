@@ -26,6 +26,9 @@ public class Casamento {
 
     @Column(name = "data_evento", nullable = false)
     private LocalDate dataEvento;
+    
+    @Column(name = "data_limite_rsvp")
+    private LocalDate dataLimiteRsvp;
 
     @Column(nullable = false)
     private Boolean ativo = true;
@@ -64,6 +67,14 @@ public class Casamento {
 
     public void setDataEvento(LocalDate dataEvento) {
         this.dataEvento = dataEvento;
+    }
+    
+    public LocalDate getDataLimiteRsvp() {
+        return dataLimiteRsvp;
+    }
+
+    public void setDataLimiteRsvp(LocalDate dataLimiteRsvp) {
+        this.dataLimiteRsvp = dataLimiteRsvp;
     }
 
     public Boolean getAtivo() {

@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import br.com.reis_wedding.entity.Casamento;
 import br.com.reis_wedding.service.CasamentoService;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 @RestController
 @RequestMapping("/casamentos")
@@ -38,4 +40,25 @@ public class CasamentoController {
 
 	        return ResponseEntity.ok(casamentoService.listarTodos());
 	    }
+	    
+	    @GetMapping("/{id}")
+	    public ResponseEntity<Casamento> buscarPorId(
+	            @PathVariable Long id) {
+
+	        return ResponseEntity.ok(
+	                casamentoService.buscarPorId(id)
+	        );
+	    }
+
+	    @PutMapping("/{id}")
+	    public ResponseEntity<Casamento> atualizar(
+	            @PathVariable Long id,
+	            @RequestBody Casamento dados) {
+
+	        return ResponseEntity.ok(
+	                casamentoService.atualizar(id, dados)
+	        );
+	    }
+	    
+	    
 }

@@ -10,4 +10,6 @@ public interface AcompanhanteRepository extends JpaRepository<Acompanhante, Long
 	 List<Acompanhante> findByConviteId(Long conviteId);
 	 
 	 long countByConviteId(Long conviteId);
+	 
+	 void deleteByConviteId(Long conviteId);
 }
